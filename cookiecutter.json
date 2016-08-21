@@ -1,6 +1,6 @@
 {
   "full_name": "Thomas Fors",
-  "email": "tfors@aps.anl.gov",
+  "email": "tom@junk.com",
   "module_name": "test",
   "directory_name": "{{cookiecutter.module_name}}",
   "purpose": "Provide a simple verilog module for extension.",
