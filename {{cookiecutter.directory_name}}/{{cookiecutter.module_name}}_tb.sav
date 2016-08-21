@@ -12,7 +12,7 @@
 *-14.998483 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] {{cookiecutter.module_name}}_tb.
 [sst_width] 203
-[signals_width] 134
+[signals_width] 150
 [sst_expanded] 1
 [sst_vpaned_height] 157
 @28
@@ -20,6 +20,33 @@
 {{cookiecutter.module_name}}_tb.reset[0]
 @200
 -
+{% if cookiecutter.include_avalon_mm_interface == 'True' -%}
+@28
+{{cookiecutter.module_name}}_tb.address[1:0]
+{{cookiecutter.module_name}}_tb.read[0]
+@22
+{{cookiecutter.module_name}}_tb.readdata[31:0]
+@28
+{{cookiecutter.module_name}}_tb.write[0]
+@23
+{{cookiecutter.module_name}}_tb.writedata[31:0]
+@200
+-
+{%- endif %}
+{% if cookiecutter.include_avalon_st_interface == 'True' -%}
+@22
+{{cookiecutter.module_name}}_tb.st_data[7:0]
+@28
+{{cookiecutter.module_name}}_tb.st_valid[0]
+@200
+-
+@22
+{{cookiecutter.module_name}}_tb.dut.aso_data[7:0]
+@28
+{{cookiecutter.module_name}}_tb.dut.aso_valid[0]
+@200
+-
+{%- endif %}
 @23
 {{cookiecutter.module_name}}_tb.dut.counter[31:0]
 [pattern_trace] 1

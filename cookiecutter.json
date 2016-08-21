@@ -5,5 +5,7 @@
   "directory_name": "{{cookiecutter.module_name}}",
   "purpose": "Provide a simple verilog module for extension.",
   "date": "{% now 'local', '%B %d, %Y' %}",
+  "include_avalon_mm_interface": [true, false],
+  "include_avalon_st_interface": [false, true],
   "_extensions": ["jinja2_time.TimeExtension"]
 }
