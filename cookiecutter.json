@@ -1,0 +1,9 @@
+{
+  "full_name": "Thomas Fors",
+  "email": "tfors@aps.anl.gov",
+  "module_name": "test",
+  "directory_name": "{{cookiecutter.module_name}}",
+  "purpose": "Provide a simple verilog module for extension.",
+  "date": "{% now 'local', '%B %d, %Y' %}",
+  "_extensions": ["jinja2_time.TimeExtension"]
+}
